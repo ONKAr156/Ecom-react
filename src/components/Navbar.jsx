@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import logo from '../images/logo/logo.svg'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
+    const [data, setData] = useState(false)
+
     const lang = ['English', 'Hindi', 'Marathi']
     const curr = ['Rupee', 'Dollar', 'Pound']
+
     const select1 = <select class="form-select">   {lang.map(item => <option key={item}>{item} </option>)} </select>
     const select2 = <select class="form-select">   {curr.map(item => <option key={item}>{item} </option>)} </select>
     return <>
+
         {/* nav1 */}
         <div className='flex border-b justify-between items-center mx-2 py-4 px-14'>
             <div className='hidden md:block lg:block'>
@@ -32,11 +37,11 @@ const Navbar = () => {
                 </div>
                 <div className=' hidden md:hidden lg:block'>
                     <div className='flex gap-4 items-center'>
-                        <span className='text-base font-medium'>Home</span>
-                        <span className='text-base font-medium'>Shop</span>
-                        <span className='text-base font-medium'>Products</span>
-                        <span className='text-base font-medium'>Accessories</span>
-                        <span className='text-base font-medium'>Contact</span>
+                        <Link to={"/"} className='text-base font-medium'>Home</Link>
+                        <Link to={"/shop"} className='text-base font-medium'>Shop</Link>
+                        <Link to={"/products"} className='text-base font-medium'>Products</Link>
+                        <Link to={"/accessories"} className='text-base font-medium'>Accessories</Link>
+                        <Link to={"/contact"} className='text-base font-medium'>Contact</Link>
                     </div>
 
                 </div>
@@ -58,9 +63,15 @@ const Navbar = () => {
                         <span> <i className='px-3 py-2 bg-slate-200 rounded-full bi bi-heart'></i> </span>
                         <span> <i className='px-3 py-2 bg-slate-200 rounded-full bi bi-cart'></i> </span>
                     </p>
-                    <p className='sm:block md:block lg:hidden'>
-                        <span> <i className=' px-3 py-2 bg-slate-200 rounded-full bi bi-list'></i> </span>
-                    </p>
+                    <div className='sm:block md:block lg:hidden'>
+                        <span onClick={e => setData(!data)}> <i className=' px-3 py-2 bg-slate-200 rounded-full bi bi-list'></i> </span>
+
+                    </div>
+                    <div>
+                        {
+                            data ? <ShowNav /> : false
+                        }
+                    </div>
                 </div>
             </div>
 
@@ -70,6 +81,22 @@ const Navbar = () => {
 
 
 
+    </>
+}
+
+const ShowNav = () => {
+console.log("hello");
+    return <>
+        <div className=' hidden md:hidden lg:block'>
+            <div className='flex gap-4 items-center'>
+                <Link to={"/"} className='text-base font-medium'>Home</Link>
+                <Link to={"/shop"} className='text-base font-medium'>Shop</Link>
+                <Link to={"/products"} className='text-base font-medium'>Products</Link>
+                <Link to={"/accessories"} className='text-base font-medium'>Accessories</Link>
+                <Link to={"/contact"} className='text-base font-medium'>Contact</Link>
+            </div>
+
+        </div>
 
     </>
 }

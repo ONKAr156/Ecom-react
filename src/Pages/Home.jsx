@@ -39,7 +39,6 @@ const Home = () => {
         { icon: "bi bi-wallet2", title: "Online Payment" },
         { icon: "bi bi-arrow-repeat", title: "Easy Return" }
     ]
-
     return <>
         <div className='mx-14 '>
             <div className='grid grid-cols-12  gap-8 mt-8 '>
