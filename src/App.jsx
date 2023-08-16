@@ -12,7 +12,7 @@ const App = () => {
   function Fallback({ error, resetErrorBoundary }) {
     return (
       <div role="alert">
-        <p>Something went wrong:</p>
+        {/* <p>Something went wrong:</p> */}
         <pre style={{ color: "red" }}>{error.message}</pre>
       </div>
     );
@@ -20,7 +20,6 @@ const App = () => {
 
   return <BrowserRouter>
     <ErrorBoundary FallbackComponent={Fallback}>
-
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
@@ -28,7 +27,7 @@ const App = () => {
         <Route path='/contact' element={<Contact />} />
       </Routes>
       <Footer />
-{/* --------------------------------------------------------------------------- */}
+      {/* --------------------------------------------------------------------------- */}
       {/* <Test/> */}
     </ErrorBoundary>
   </BrowserRouter>

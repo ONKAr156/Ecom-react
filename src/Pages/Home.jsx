@@ -1,4 +1,5 @@
 import React from 'react'
+import "../Pages/home.css"
 import Img1 from "../ecom-images/headers/header-04/image-01.jpg"
 import Img2 from "../ecom-images/headers/header-04/image-02.jpg"
 import Img3 from "../ecom-images/headers/header-04/image-03.jpg"
@@ -40,167 +41,164 @@ const Home = () => {
         { icon: "bi bi-arrow-repeat", title: "Easy Return" }
     ]
     return <>
-        <div className='mx-14 '>
-            <div className='grid grid-cols-12  gap-8 mt-8 '>
-                <div className='col-span-12 py-3 lg:col-span-8 h-[33rem]  overflow-hidden relative '>
-                    <img className='absolute h-[31rem] w-full' src={Img1} alt="" />
+        <div className='px-10 border border-solid border-red-500'>
+            <div className='md:grid md:grid-cols-12 gap-6  mt-8 '>
+                <div  className='xm1 col-span-12 py-3 lg:col-span-8 h-[33rem]  bg-yellow-300   overflow-hidden relative '>
                     <div className=' absolute mt-24 mx-6 md:mx-8 lg:mx-14'>
-                        <p className=' lg:w-[60%] text-4xl font-bold'>Mega Sale Up To 50% <br /> Off For All</p>
+                        <p className='  md:w-[40%] lg:w-[60%] text-4xl font-bold'>Mega Sale Up To 50% <br /> Off For All</p>
                         <p className='text-lg text-gray-500 my-8 md:w-[80%] lg:w-[60%]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare vestibulum mollis. Nam vitae augue purus. Integer ac accumsan nunc.</p>
-                        <button className=' bg-blue-700 text-slate-100  px-8 py-3 text-xl rounded-lg'>Shop Now</button>
+                        <button className='button-name font-mono '>Shop Now</button>
                     </div>
                 </div>
-                <div className='col-span-12 w-full block md:flex lg:block gap-8 lg:col-span-4  '>
-                    <div className='h-[15rem] relative w-[100%] my-4'>
-                        <img className='h-[15rem] w-full absolute' src={Img2} alt="" />
-                        <div className='absolute right-0 bottom-16 me-5 text-end'>
-                            <p className='text-3xl font-bold'> Summer Travel </p>
-                            <p className='text-3xl font-bold'>Collection</p>
+                <div className='col-span-12 w-full block md:flex lg:block gap-8 lg:col-span-4 '>
+                    <div className=' xm2 h-[15rem]  relative w-[100%] my-4'>
+                        <div className='absolute right-0 bottom-26 lg:bottom-6 me-5 text-end'>
+                            <p className=' text-xl lg:text-3xl font-bold'> Summer Travel </p>
+                            <p className=' text-xl lg:text-3xl font-bold'>Collection</p>
                             <p className='text-xl pt-3'> Discover Now</p>
                         </div>
                     </div>
 
-                    <div className='h-[15rem] relative w-[100%] my-4'>
-                        <img className='h-[15rem] w-full absolute' src={Img3} alt="" />
-                        <div className='absolute right-0 bottom-16 me-5 text-end'>
-                            <p className='text-3xl font-bold'> Get 30% Off </p>
-                            <p className='text-3xl font-bold'> On iPhone</p>
+                    <div className='xm3 h-[15rem] relative w-[100%] my-4'>
+                        {/* <img className='h-[15rem] w-full absolute' src={Img3} alt="" /> */}
+                        <div className='absolute right-0 bottom-8 lg:bottom-6 me-5 text-end'>
+                            <p className=' text-xl lg:text-3xl font-bold'> Get 30% Off </p>
+                            <p className=' text-xl lg:text-3xl font-bold'> On iPhone</p>
                             <p className='text-xl pt-3'>Shop Now</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div className='text-center my-10 flex gap-6 flex-col'>
-            <h2 className='text-4xl  font-bold '>You may also like</h2>
-            <p className='text-slate-500 text-sm'>There are many variations of passages of Lorem Ipsum available <br /> but the majority have suffered alteration in some form.</p>
-        </div>
 
-        <div className='grid grid-cols-12 gap-10 mx-10 my-5 '>
-            {
-                carousel.map(item => <div className=' col-span-12  md:col-sm-6 lg:col-span-3 relative'>
-                    <div className='  text-center flex justify-between gap-4 flex-col border border-solid '>
-                        <p>
-                            <img className='w-full' src={item.img} alt="" />
-                        </p>
-                        <p>{item.details}</p>
-                        <p>
-                            <i className="  text-yellow-400 bi bi-star-fill"></i>
-                            <i className="  text-yellow-400 bi bi-star-fill"></i>
-                            <i className="  text-yellow-400 bi bi-star-fill"></i>
-                            <i className="  text-yellow-400 bi bi-star-fill"></i>
-                            <i className="  text-yellow-400 bi bi-star-fill"></i>
-                        </p>
-                        <p>{item.price}</p>
-                        <p><button className='bg-blue-700 text-slate-100 px-5 rounded-md py-2 mb-3'>Add </button></p>
+            <div className='text-center my-10 flex gap-6 flex-col '>
+                <h2 className='text-4xl  font-bold '>You may also like</h2>
+                <p className='text-slate-500 text-sm'>There are many variations of passages of Lorem Ipsum available <br /> but the majority have suffered alteration in some form.</p>
+            </div>
+
+            <div className='md:grid md:grid-cols-12 lg:gap-10 mx-10 my-5  '>
+                {
+                    carousel.map(item => <div className=' col-span-12  sm:col-span-6 lg:col-span-3 my-10 relative'>
+                        <div className='  text-center flex justify-between gap-4 flex-col border border-solid '>
+                            <p>
+                                <img className=' h-auto object-cover max-w-full' src={item.img} alt="" />
+                            </p>
+                            <p>{item.details}</p>
+                            <p>
+                                <i className="  text-yellow-400 bi bi-star-fill"></i>
+                                <i className="  text-yellow-400 bi bi-star-fill"></i>
+                                <i className="  text-yellow-400 bi bi-star-fill"></i>
+                                <i className="  text-yellow-400 bi bi-star-fill"></i>
+                                <i className="  text-yellow-400 bi bi-star-fill"></i>
+                            </p>
+                            <p>{item.price}</p>
+                            <p><button className='bg-blue-700 text-slate-100 px-5 rounded-md py-2 mb-3'>Add </button></p>
+                        </div>
+                        <div className={` absolute top-6 left-5 ${item.bg}  text-slate-100 px-3 py-1 rounded-md`}>
+                            {item.news}
+                        </div>
+                    </div>)
+
+                }
+            </div>
+            <p className=' flex justify-center items-center gap-2 my-8'>
+                <button><i className="   bg-slate-400 hover:bg-blue-700 text-slate-100 rounded-full  px-3 py-2  bi bi-arrow-left"></i></button>
+                <button><i className="   bg-slate-400 hover:bg-blue-700 text-slate-100 rounded-full  px-3 py-2  bi bi-arrow-right"></i></button>
+            </p>
+
+            <div className="md:grid md:grid-cols-12 mx-10">
+                <div className=' col-span-12 lg:col-span-6  '>
+                    <div className='mt-[40%] flex flex-col gap-10'>
+                        <div className='flex gap-3 flex-col'>
+                            <p className='font-medium text-2xl text-blue-600'>Start From $50</p>
+                            <p className='font-bold text-4xl  '>New Arrival From Creative <br /> Clock Collections</p>
+                        </div>
+                        <p className='w-[30rem] text-slate-500 text-base font-medium max-w-full overflow-hidden'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet molestie nunc. Vestibulum tempus justo et venenatis tempus. Nulla tincidunt,</p>
+                        <p className=''><button className='bg-blue-700 text-slate-100 px-5 py-2 rounded-md mb-4'>View All Items</button></p>
                     </div>
-                    <div className={` absolute top-6 left-5 ${item.bg}  text-slate-100 px-3 py-1 rounded-md`}>
-                        {item.news}
-                    </div>
-                </div>)
+                </div>
 
-            }
-        </div>
-        <p className=' flex justify-center items-center gap-2 my-8'>
-            <button><i className="   bg-slate-400 hover:bg-blue-700 text-slate-100 rounded-full  px-3 py-2  bi bi-arrow-left"></i></button>
-            <button><i className="   bg-slate-400 hover:bg-blue-700 text-slate-100 rounded-full  px-3 py-2  bi bi-arrow-right"></i></button>
-        </p>
-
-        <div className="grid grid-cols-12 mx-10">
-            <div className=' col-span-12 lg:col-span-6  '>
-                <div className='mt-[40%] flex flex-col gap-10'>
-                    <div className='flex gap-3 flex-col'>
-                        <p className='font-medium text-2xl text-blue-600'>Start From $50</p>
-                        <p className='font-bold text-4xl '>New Arrival From Creative <br /> Clock Collections</p>
-                    </div>
-                    <p className='w-[30rem] text-slate-500 text-base font-medium'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet molestie nunc. Vestibulum tempus justo et venenatis tempus. Nulla tincidunt,</p>
-                    <p className=''><button className='bg-blue-700 text-slate-100 px-5 py-2 rounded-md mb-4'>View All Items</button></p>
+                <div className='col-span-12 lg:col-span-6         '>
+                    <img className='w-full p-16 ' src={clock} alt="" />
                 </div>
             </div>
 
-            <div className='col-span-12 lg:col-span-6         '>
-                <img className='w-full p-16 ' src={clock} alt="" />
-            </div>
-        </div>
+            <div className="grid grid-cols-12 mx-10 mt-4">
+                <div className=" col-span-12 lg:col-span-6">
+                    <img className='w-full p-16 ' src={sunglasses} alt="" />
+                </div>
 
-        <div className="grid grid-cols-12 mx-10 mt-4">
-            <div className=" col-span-12 lg:col-span-6">
-                <img className='w-full p-16 ' src={sunglasses} alt="" />
-            </div>
-
-            <div className=" col-span-12 lg:col-span-6 gap-6 ">
-                <div className='mt-[10%] md:mt-[20%] lg:mt-[30%] mx-6 flex flex-col gap-10'>
-                    <div className='flex flex-col gap-3 '>
-                        <p className='font-medium text-2xl text-blue-700'>Start From $49</p>
-                        <p className='font-medium text-4xl'>New Summer Collections <br /> For Man's Fashion.</p>
+                <div className=" col-span-12 lg:col-span-6 gap-6 ">
+                    <div className='mt-[10%] md:mt-[20%] lg:mt-[30%] mx-6 flex flex-col gap-10'>
+                        <div className='flex flex-col gap-3 '>
+                            <p className='font-medium text-2xl text-blue-700'>Start From $49</p>
+                            <p className='font-medium text-4xl'>New Summer Collections <br /> For Man's Fashion.</p>
+                        </div>
+                        <p className='w-[30rem] max-w-full overflow-hidden'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet molestie nunc. Vestibulum tempus justo et venenatis tempus. Nulla tincidunt,</p>
+                        <p><button className='px-5 py-2 bg-blue-700 mb-5 rounded-md text-stone-100'>View All Items</button></p>
                     </div>
-                    <p className='w-[30rem]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet molestie nunc. Vestibulum tempus justo et venenatis tempus. Nulla tincidunt,</p>
-                    <p><button className='px-5 py-2 bg-blue-700 mb-5 rounded-md text-stone-100'>View All Items</button></p>
                 </div>
             </div>
+
+            <div className='text-center my-10 flex gap-6 flex-col'>
+                <h2 className='text-4xl  font-bold '>Shop By Category</h2>
+                <p className='text-slate-500 text-sm'>There are many variations of passages of Lorem Ipsum available <br /> but the majority have suffered alteration in some form.</p>
+            </div>
+            <br />
+            <div className='md:grid md:grid-cols-12 gap-10 mx-10  '>
+                {
+                    category.map(item => <div className=' col-span-12  md:col-sm-6 lg:col-span-3 my-10 relative'>
+                        <div className='  text-center flex justify-between  flex-col  '>
+                            <p>
+                                <img className='w-full' src={item.img} alt="" />
+                            </p>
+                            <p className='font-semibold text-2xl'>{item.details}</p>
+
+                            <p className='text-slate-600 font-medium  text-base'>{item.product}</p>
+                        </div>
+
+                    </div>)
+
+                }
+            </div>
+            <div className='flex justify-center'><button className='bg-blue-700 text-slate-100 px-5 py-2 rounded-md my-3'>Explore all category</button></div>
+            <br /><br />
+            <div className='text-center my-10 flex gap-6 flex-col'>
+                <p className='font-semibold'>Our Blogs</p>
+                <h2 className='text-4xl  font-bold '>Our Recent News</h2>
+                <p className='text-slate-500 text-sm'>There are many variations of passages of Lorem Ipsum available <br /> but the majority have suffered alteration in some form.</p>
+            </div>
+
+            <div className='md:grid md:grid-cols-12 gap-10 mx-10 '>
+                {
+                    blogs.map(item => <div className=' col-span-12  md:col-sm-6 lg:col-span-4 my-10 gap-2 relative'>
+                        <div className='  text-center flex justify-between gap-2 flex-col  '>
+                            <p>
+                                <img className='"max-w-[100%]' src={item.img} alt="" />
+                            </p>
+                            <p className='font-semibold text-2xl w-[80%] text-slate-600'>{item.details}</p>
+
+                            <p className='text-slate-600 font-medium  text-base'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque hic repudiandae eaque fuga odit sunt.</p>
+
+                        </div>
+
+                    </div>)
+
+                }
+            </div>
+            <br /> <br />
+
+            <div className='md:grid md:grid-cols-12  mx-10 gap-10 my-10'>
+                {
+                    icons.map(item => <div className='col-span-12 md:col-md-6 lg:col-span-4 my-10'>
+                        <div className='flex flex-col gap-6 justify-center items-center  '>
+                            <p className=''><i className={`${item.icon} rounded-full text-3xl text-blue-700  bg-slate-100 px-6 py-5`}></i></p>
+                            <p className=' text-base lg:text-2xl font-medium'>{item.title}</p>
+                        </div>
+                    </div>)
+                }
+            </div>
         </div>
-
-        <div className='text-center my-10 flex gap-6 flex-col'>
-            <h2 className='text-4xl  font-bold '>Shop By Category</h2>
-            <p className='text-slate-500 text-sm'>There are many variations of passages of Lorem Ipsum available <br /> but the majority have suffered alteration in some form.</p>
-        </div>
-        <br />
-        <div className='grid grid-cols-12 gap-10 mx-10 my-5 '>
-            {
-                category.map(item => <div className=' col-span-12  md:col-sm-6 lg:col-span-3 relative'>
-                    <div className='  text-center flex justify-between gap-2 flex-col  '>
-                        <p>
-                            <img className='w-full' src={item.img} alt="" />
-                        </p>
-                        <p className='font-semibold text-2xl'>{item.details}</p>
-
-                        <p className='text-slate-600 font-medium  text-base'>{item.product}</p>
-                    </div>
-
-                </div>)
-
-            }
-        </div>
-        <div className='flex justify-center'><button className='bg-blue-700 text-slate-100 px-5 py-2 rounded-md my-3'>Explore all category</button></div>
-        <br /><br />
-        <div className='text-center my-10 flex gap-6 flex-col'>
-            <p className='font-semibold'>Our Blogs</p>
-            <h2 className='text-4xl  font-bold '>Our Recent News</h2>
-            <p className='text-slate-500 text-sm'>There are many variations of passages of Lorem Ipsum available <br /> but the majority have suffered alteration in some form.</p>
-        </div>
-
-        <div className='grid grid-cols-12 gap-10 mx-10 my-5 '>
-            {
-                blogs.map(item => <div className=' col-span-12  md:col-sm-6 lg:col-span-4 relative'>
-                    <div className='  text-center flex justify-between gap-2 flex-col  '>
-                        <p>
-                            <img className='w-full' src={item.img} alt="" />
-                        </p>
-                        <p className='font-semibold text-2xl w-[80%] text-slate-600'>{item.details}</p>
-
-                        <p className='text-slate-600 font-medium  text-base'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque hic repudiandae eaque fuga odit sunt.</p>
-
-                    </div>
-
-                </div>)
-
-            }
-        </div>
-        <br /> <br />
-
-        <div className='grid grid-cols-12  mx-10 gap-10 my-10'>
-            {
-                icons.map(item=><div className='col-span-12 md:col-md-6 lg:col-span-4'>
-                    <div className='text-center  '>
-                        <p className='my-2'><i className={`${item.icon} rounded-full text-3xl text-blue-700  bg-slate-100 px-6 py-5` }></i></p>
-                        <p className='mt-14 text-2xl font-medium'>{item.title}</p>
-                    </div>
-                </div>)
-            }
-        </div>
-
-
     </>
 }
 
