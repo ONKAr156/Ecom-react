@@ -7,6 +7,7 @@ import Shop from './Pages/Shop'
 import Contact from './Pages/Contact'
 import { ErrorBoundary } from 'react-error-boundary'
 import Test from './Pages/Test'
+import NotFound from './Pages/NotFound'
 
 const App = () => {
   function Fallback({ error, resetErrorBoundary }) {
@@ -25,8 +26,12 @@ const App = () => {
         <Route path='/' element={<Home />} />
         <Route path='/shop' element={<Shop />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='*' element={<NotFound/>} />
       </Routes>
       <Footer />
+      <Routes>
+        
+      </Routes>
       {/* --------------------------------------------------------------------------- */}
       {/* <Test/> */}
     </ErrorBoundary>

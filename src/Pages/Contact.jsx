@@ -21,7 +21,7 @@ const Contact = () => {
         <p className='font-medium my-3 text-xl text-slate-400'> Submit Your Support Ticket, We will be with you as soon as we are able.</p>
       </div>
 
-      <div className='  flex justify-center items-center my-20 '>
+      <div className='  flex justify-center items-center my-20  '>
         <div className='h-[36rem] w-[40rem] flex flex-col justify-start items-center gap-4 border border-solid px-10 '>
 
           <div className='flex justify-center gap-8 mx-auto my-4 '>
@@ -52,7 +52,7 @@ const Contact = () => {
             <textarea className='border border-solid'  id="desc" cols="60" rows="5" placeholder='Enter your message here'></textarea>
           </div>
 
-          <button className='bg-blue-800 text-slate-100 px-14 py-4 '>Submit</button>
+          <button className='bg-blue-800 hover:bg-red-600  text-slate-100 px-14 py-4 '>Submit</button>
 
 
         </div>

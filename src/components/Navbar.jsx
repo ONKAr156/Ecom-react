@@ -85,7 +85,7 @@ const Navbar = () => {
 }
 
 const ShowNav = () => {
-console.log("hello");
+console.log("hello")
     return <>
         <div className=' hidden md:hidden lg:block'>
             <div className='flex gap-4 items-center'>

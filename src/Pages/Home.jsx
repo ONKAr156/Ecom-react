@@ -92,7 +92,7 @@ const Home = () => {
                                 <i className="  text-yellow-400 bi bi-star-fill"></i>
                             </p>
                             <p>{item.price}</p>
-                            <p><button className='bg-blue-700 text-slate-100 px-5 rounded-md py-2 mb-3'>Add </button></p>
+                            <p><button className='bg-blue-700 hover:bg-red-600  text-slate-100 px-5 rounded-md py-2 mb-3'>Add </button></p>
                         </div>
                         <div className={` absolute top-6 left-5 ${item.bg}  text-slate-100 px-3 py-1 rounded-md`}>
                             {item.news}
@@ -114,7 +114,7 @@ const Home = () => {
                             <p className='font-bold text-4xl  '>New Arrival From Creative <br /> Clock Collections</p>
                         </div>
                         <p className='w-[30rem] text-slate-500 text-base font-medium max-w-full overflow-hidden'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet molestie nunc. Vestibulum tempus justo et venenatis tempus. Nulla tincidunt,</p>
-                        <p className=''><button className='bg-blue-700 text-slate-100 px-5 py-2 rounded-md mb-4'>View All Items</button></p>
+                        <p className=''><button className='bg-blue-700 hover:bg-red-600  text-slate-100 px-5 py-2 rounded-md mb-4'>View All Items</button></p>
                     </div>
                 </div>
 
@@ -135,7 +135,7 @@ const Home = () => {
                             <p className='font-medium text-4xl'>New Summer Collections <br /> For Man's Fashion.</p>
                         </div>
                         <p className='w-[30rem] max-w-full overflow-hidden'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet molestie nunc. Vestibulum tempus justo et venenatis tempus. Nulla tincidunt,</p>
-                        <p><button className='px-5 py-2 bg-blue-700 mb-5 rounded-md text-stone-100'>View All Items</button></p>
+                        <p><button className='px-5 py-2 bg-blue-700 mb-5 rounded-md text-stone-100 hover:bg-red-600 '>View All Items</button></p>
                     </div>
                 </div>
             </div>
@@ -161,7 +161,7 @@ const Home = () => {
 
                 }
             </div>
-            <div className='flex justify-center'><button className='bg-blue-700 text-slate-100 px-5 py-2 rounded-md my-3'>Explore all category</button></div>
+            <div className='flex justify-center'><button className='bg-blue-700 text-slate-100 px-5 py-2 rounded-md my-3 hover:bg-red-600 '>Explore all category</button></div>
             <br /><br />
             <div className='text-center my-10 flex gap-6 flex-col'>
                 <p className='font-semibold'>Our Blogs</p>
@@ -174,7 +174,7 @@ const Home = () => {
                     blogs.map(item => <div className=' col-span-12  md:col-sm-6 lg:col-span-4 my-10 gap-2 relative'>
                         <div className='  text-center flex justify-between gap-2 flex-col  '>
                             <p>
-                                <img className='"max-w-[100%]' src={item.img} alt="" />
+                                <img className='hover:scale-110 max-w-[100%]' src={item.img} alt="" />
                             </p>
                             <p className='font-semibold text-2xl w-[80%] text-slate-600'>{item.details}</p>
 

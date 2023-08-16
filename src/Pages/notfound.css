@@ -1,0 +1,8 @@
+.err_img {
+    background-image: url("../images/error/2.jpg");
+    height: 22.7rem;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
