@@ -29,5 +29,5 @@ Check out the live demo of the project: [Watch ](https://ecom-react-1.vercel.app
 
 Since the project is currently in the development phase, there are a few steps you need to follow to set it up locally:
 1) Download zip and extract
-2) Npm i
+2) npm i
 3) npm run dev
