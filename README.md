@@ -23,7 +23,7 @@ ECOM-REACT is an e-commerce website that aims to provide a user-friendly and res
 
 ## Demo
 
-Check out the live demo of the project: [Demo Link]([https://your-demo-link.com](https://ecom-react-1.vercel.app/))
+Check out the live demo of the project: [Watch ](https://ecom-react-1.vercel.app/).
 
 ## Getting Started
 
